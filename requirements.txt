@@ -2,5 +2,6 @@ Flask==2.0.1
 gunicorn==20.1.0
 Werkzeug==2.0.3
 flask-bcrypt
-flask_sqlalchemy
+SQLAlchemy==2.0.21
+Flask-SQLAlchemy==3.0.3
 flask_cors

@@ -10,6 +10,13 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 CORS(app)
 
+@app.route("/")
+def home():
+    return "Hello, world!"  # Проверь, есть ли что-то здесь
+
+if __name__ == "__main__":
+    app.run()
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)

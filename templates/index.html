@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telpu rezervācija</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div id="auth">
+        <h2>Reģistrācija</h2>
+        <input type="text" id="register-username" placeholder="Lietotājvārds">
+        <input type="password" id="register-password" placeholder="Parole">
+        <button onclick="registreties()">Reģistrēties</button>
+
+        <h2>Pieslēgšanās</h2>
+        <input type="text" id="login-username" placeholder="Lietotājvārds">
+        <input type="password" id="login-password" placeholder="Parole">
+        <button onclick="pieslegties()">Pieslēgties</button>
+    </div>
+
+    <div id="content" style="display: none;">
+        <button onclick="atslegties()">Atslēgties</button>
+        <h2>Telpu saraksts</h2>
+        <ul id="facility-list"></ul>
+        
+        <h2>Rezervēt telpu</h2>
+        <select id="facility-select"></select>
+        <input type="date" id="booking-date">
+        <input type="time" id="booking-time">
+        <button onclick="rezervetTelpu()">Rezervēt</button>
+        
+        <h2>Manas rezervācijas</h2>
+        <ul id="booking-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,3 +1,10 @@
+from flask import Flask, request, jsonify, render_template
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
+@app.route('/')
+def index():
+    return render_template('index.html')  # Открываем HTML
 from flask import Flask, request, jsonify, session
 from flask_bcrypt import Bcrypt
 from flask_sqlalchemy import SQLAlchemy
